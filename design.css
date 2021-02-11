@@ -120,11 +120,10 @@ h1.txtchange:hover{
 
 /*pics*/
 #picid{
-    width: 50%;
     height: 2cm;
     position: fixed;
     top: 5cm;
-    right: 5px;
+    right: 3px;
 }
 
 #picid img{
@@ -167,3 +166,41 @@ div.dp:hover{
     opacity: .75;
     filter: blur(2px);
 }
+
+/*arrow*/
+#rarrpos{
+    position: absolute;
+    top: 4.5cm;
+    right: 1cm;
+}
+
+#rarrpos i:hover{
+    transform: scale(1.2);
+    color: brown;
+}
+
+#larrpos{
+    position: absolute;
+    top: 4.5cm;
+    right: 19cm;
+}
+
+#larrpos i:hover{
+    transform: scale(1.2);
+    color: brown;
+}
+
+
+
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+  }

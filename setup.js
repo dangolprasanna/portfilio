@@ -1,6 +1,8 @@
-document.getElementById("textstl").addEventListener("wheel", myFunction);
+window.onscroll = function() {myFunction()};
 
 function myFunction() {
-//  this.style.imagesize = "35px";
-    
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
 }
