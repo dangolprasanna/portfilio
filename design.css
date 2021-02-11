@@ -1,0 +1,169 @@
+/*landing page*/
+body{
+    background-color: black;
+}
+.text{
+    color: white;
+}
+
+#lpage{
+    position: absolute;
+    top: .5cm ;
+    left: .5cm;
+    margin: auto;
+}
+
+/*icons*/
+#lpage i{
+    width: 1.5cm;
+    color: white;
+}
+
+#lpage i:hover{
+    color: rgb(224, 218, 218);
+    transform: scale(1.1);
+}
+
+/*title*/
+.title{
+    position:fixed;
+    top: .5cm;
+    left: 45%;
+    color: white;
+}
+
+#rect {
+    animation-name: rainbow;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+      }
+@keyframes rainbow{
+      0%{
+        
+        left: 5cm;
+        color: white;
+    }
+    25%{
+        color:brown;
+    }
+    50%{
+       
+        right: 5cm;
+      color: red;
+    }
+    75%{
+        color:brown;
+    }
+    100%{ 
+        color: white;
+    }
+}
+
+/*menubar*/
+#menupos{
+    position: absolute;
+    top:.80cm;
+    right: 8cm;
+}
+
+.attr{
+    color: white;
+    font-family: 'Tajawal', sans-serif;
+    font-size: .5cm;
+}
+
+div.attr:hover{
+    color: red;
+}
+
+/*intro*/
+#intropos{
+    position: absolute;
+    top: 6cm;
+    left: 3cm;
+}
+
+#intropos h1{
+    font-size: 1cm;
+    height: .55cm;
+    font-stretch: expanded;
+    display: inline;
+}
+
+h1.txtchange:hover{
+    position:relative;
+    bottom: 3px;
+    transform: scale(1.1);
+}
+
+#intropos h2{
+    font-size: .85cm;
+    height: .25cm;
+    font-stretch: expanded;
+}
+
+ #intropos p{
+    font-size: .50cm;
+ }
+
+ #intropos img{
+     position: relative;
+     right: 2.3cm;
+     bottom: 1cm;
+ }
+.intro{
+    color: white;
+    font-family: 'EB Garamond', serif;
+}
+
+/*pics*/
+#picid{
+    width: 50%;
+    height: 2cm;
+    position: fixed;
+    top: 5cm;
+    right: 5px;
+}
+
+#picid img{
+    border-radius: 5px;
+}
+
+.dp{
+     opacity: .95;
+ }
+
+.textstl{
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size:1em;
+    font-weight: lighter;
+}
+#textme{
+    position: fixed;
+    top: 4.5cm;
+    right: 10.5cm;
+    animation-name: appear;
+    animation-duration: 500ms;
+    animation-delay: 250ms;
+    color: white;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+div.dp:hover{
+    opacity: .75;
+    filter: blur(2px);
+}
