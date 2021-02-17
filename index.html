@@ -8,28 +8,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="design.css" type="text/css">  
         <script src="https://kit.fontawesome.com/59956f7204.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
     <section>
-      <div class="text" id="lpage">
-        <a href="https://www.facebook.com/dangolprasanna/" target="_blank"> 
-            <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://www.instagram.com/dangolprasanna/" target="_blank"> 
-            <i class="fab fa-instagram fa-2x"></i>
-        </a>
-      </div>
+        <div class="text" id="lpage">
+            <a href="https://www.facebook.com/dangolprasanna/" target="_blank"> 
+                <i id="fb" class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/dangolprasanna/" target="_blank"> 
+                <i id="insta" class="fab fa-instagram fa-2x"></i>
+            </a>
+        </div>
 
-      <div class="title"> 
-        <i id="rect" class="fas fa-code fa-4x "></i>
-      </div>
-
-      <div class="attr" id="menupos">
-        ABOUT
-      </div>
+        <div class="title"> 
+            <i id="rect" class="fas fa-code fa-4x "></i>
+        </div>
+        <div id="menupos">
+          <div class="attr">
+                <a href="#abtsec">About</a>
+            </div>
+            <div class="attr" id="" >
+                <a href="#achpos">Achievements</a>
+            </div>
+        </div>
     </section>
 
     <section class="intro" id="intropos">
@@ -47,37 +52,89 @@
         <div>
             <img src="signature.png" alt="sign">
         </div>
-            <div id="picid" >
-                <div class="dp">
-                    <img src="me.jpg" alt="">
-                </div>
-                <div class="textstl" id="textme">
-                    THIS IS ME
-                </div>
-                <div  id="rarrpos">
-                    <button>
-                        <i class="fas fa-arrow-circle-right fa-2x"></i>
-                    </button>
-                </div>
-                <div  id="larrpos">
-                    <button>
-                        <i class="fas fa-arrow-circle-left fa-2x"></i>
-                    </button>
-                    
-                </div>
-                
+    </section>
+        <div id="picid">
+            <div class="dp">
+                <img src="me.jpg" alt="">
+            </div>            
+            <div class="textstl" id="textme">
+                THIS IS ME
             </div>
-            <div class="header">
-                <h2>Scroll Indicator</h2>
-                <div class="progress-container">
-                  <div class="progress-bar" id="myBar"></div>
-                </div>  
-              </div>
+        </div>
+      
+    <section id="abtsec">
+        <div class="abt">
+            <hr color="red">
+            ABOUT
+            <hr color="red">
+        </div>
+        <div class="abttex" id="abttext">
+            <p>
+                I'm Computer Science student studying in Kalinga Institute of Industrial Technology (KIIT University).
+                I am originally from Kathmandu, Nepal, but been currently staying in Bhubaneswar, India. I completed
+                my schooling and high school from Modern Indian School.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div id="achpos">
+            <h1 class="ml9">
+            <hr color="red">
+            <span class="text-wrapper">
+               <span class="letters">Things I can offer</span>
+            </span>
+            <hr color="red">
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            
+        </div>
+        <div id="certpos">
+           
+        </div>
     </section>
 
 
-        <script src="setup.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
 
-        </script>
+      $("a").on('click', function(event) {
+    
+ 
+        if (this.hash !== "") {
+
+          event.preventDefault();
+    
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 200, function(){
+       
+
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+
+    var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+    </script>
     </body>
 </html>

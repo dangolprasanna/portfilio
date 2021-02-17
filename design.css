@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 /*landing page*/
 body{
     background-color: black;
@@ -13,6 +16,7 @@ body{
     margin: auto;
 }
 
+
 /*icons*/
 #lpage i{
     width: 1.5cm;
@@ -23,10 +27,55 @@ body{
     color: rgb(224, 218, 218);
     transform: scale(1.1);
 }
+#fb{
+    animation-name: facebook;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes facebook{
+    0%{
+        color: white;
+    }
+    50%{
+        color: #4267B2;
+    }
+    100%{
+        color: white
+    }
+}
+#insta{
+    animation-name: instagram;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
 
+@keyframes instagram {
+    0%{color:#405de6}
+    5%{color:#5851db}
+    10%{color:#833ab4}
+    15%{color:#c13584}
+    20%{color:#e1306c}
+    25%{color:#fd1d1d}
+    30%{color:#f56040}
+    35%{color:#f77737}
+    40%{color:#fcaf45}
+    45%{color:#ffdc80}
+    50%{color:#ffdc80}
+    55%{color:#fcaf45}
+    60%{color:#f77737}
+    65%{color:#f77737}
+    70%{color:#f56040}
+    75%{color:#fd1d1d}
+    80%{color:#e1306c}
+    85%{color:#c13584}
+    90%{color:#833ab4}
+    95%{color:#5851db}
+    100%{color:#405de6}
+    
+}
 /*title*/
 .title{
-    position:fixed;
+    position:absolute;
     top: .5cm;
     left: 45%;
     color: white;
@@ -41,17 +90,13 @@ body{
       }
 @keyframes rainbow{
       0%{
-        
-        left: 5cm;
         color: white;
     }
     25%{
         color:brown;
     }
     50%{
-       
-        right: 5cm;
-      color: red;
+      color: #c4264e;
     }
     75%{
         color:brown;
@@ -64,18 +109,21 @@ body{
 /*menubar*/
 #menupos{
     position: absolute;
-    top:.80cm;
+    top:.90cm;
     right: 8cm;
+    display: flex;
 }
 
-.attr{
-    color: white;
+#menupos a{
+    color: rgb(255, 255, 255);
     font-family: 'Tajawal', sans-serif;
     font-size: .5cm;
+    padding: 8px;
+    text-decoration: none;
 }
 
-div.attr:hover{
-    color: red;
+#menupos a:hover{
+    color: #e1306c ;
 }
 
 /*intro*/
@@ -109,45 +157,37 @@ h1.txtchange:hover{
  }
 
  #intropos img{
-     position: relative;
-     right: 2.3cm;
-     bottom: 1cm;
+     position: absolute;
+     left: -2.5cm;
  }
+
 .intro{
     color: white;
     font-family: 'EB Garamond', serif;
 }
-
-/*pics*/
-#picid{
-    height: 2cm;
-    position: fixed;
-    top: 5cm;
-    right: 3px;
-}
-
-#picid img{
-    border-radius: 5px;
-}
-
-.dp{
-     opacity: .95;
- }
-
 .textstl{
     color: white;
-    font-family: 'Exo 2', sans-serif;
-    font-size:1em;
-    font-weight: lighter;
+    font-family: 'Bebas Neue', cursive;
+    font-size:1.3cm;
+    font-weight:lighter;
+    background: -webkit-linear-gradient(#eee 50%, #c4264e 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #textme{
-    position: fixed;
-    top: 4.5cm;
-    right: 10.5cm;
+    position: absolute;
+    top: -.83cm;
+    right: 6cm;
     animation-name: appear;
-    animation-duration: 500ms;
+    animation-duration: 5s;
     animation-delay: 250ms;
     color: white;
+}
+
+#textme:hover{
+    background: -webkit-linear-gradient(#eee 50%, black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @keyframes appear{
@@ -162,16 +202,11 @@ h1.txtchange:hover{
     }
 }
 
-div.dp:hover{
-    opacity: .75;
-    filter: blur(2px);
-}
-
-/*arrow*/
+/*arrow
 #rarrpos{
     position: absolute;
-    top: 4.5cm;
-    right: 1cm;
+    top: 8.5cm;
+    right: 5px;
 }
 
 #rarrpos i:hover{
@@ -181,26 +216,117 @@ div.dp:hover{
 
 #larrpos{
     position: absolute;
-    top: 4.5cm;
-    right: 19cm;
+    top: 8.5cm;
+    left: 44%;
 }
 
 #larrpos i:hover{
     transform: scale(1.2);
     color: brown;
 }
+*/
 
 
+/*pics*/
+#picid{
+    height: 100%;
+    position: absolute;
+    top: 4cm;
+    right: 2.5cm;
+    
+}
 
+#picid img{
+    border-radius:50px 5px 50px 5px;
+}
 
-.progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
+.dp{
+    opacity: .95;
+    filter: saturate(10%)
+}
+
+div.dp:hover{
+    opacity: .75;
+    filter: blur(.31px);
+    border: #c4264e solid;
+    border-radius:55px 10px 59px 10px;
+    border-right:#405de6 solid;
+    border-bottom: #405de6 solid;
+    filter: saturate(100%)
+}
+#picid img:hover{
+    position: relative;
+    left: 1px;
+  
+}
+
+/*About Section*/
+#abtsec{
+    color: white;
+    position: absolute;
+    top: 17cm;
+    left: 4cm;
+
+}
+
+.abt{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 2.8cm;
+    text-align: center;
+    opacity: .50;
+    margin-right: 24cm;
+}
+
+#abttext{
+    position: absolute;
+    top: 1.7cm;
+    left: 7.2cm;
+}
+
+.abttex{
+    font-family: 'EB Garamond', serif;
+    font-size: 0.5cm;
+}
+
+#abttext p{
+    padding: 2%;
+}
+/*achievements*/
+
+.ml9 {
+    position: relative;
+    font-weight: bold;
+    font-size: 4em;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
   }
   
-  .progress-bar {
-    height: 8px;
-    background: #4caf50;
-    width: 0%;
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  #achpos{
+      position: absolute;
+      right: 3cm;
+      opacity: 0.50;
+      top: 25cm;
+  }
+
+  #certpos img{
+        margin:2%;
+        position: absolute;
+        top: 25cm;
+        
   }
