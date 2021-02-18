@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
   }
+
 /*landing page*/
 body{
     background-color: black;
@@ -118,7 +119,7 @@ body{
     color: rgb(255, 255, 255);
     font-family: 'Tajawal', sans-serif;
     font-size: .5cm;
-    padding: 8px;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -272,7 +273,7 @@ div.dp:hover{
 .abt{
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
-    font-size: 2.8cm;
+    font-size: 2.5cm;
     text-align: center;
     opacity: .50;
     margin-right: 24cm;
@@ -284,9 +285,18 @@ div.dp:hover{
     left: 7.2cm;
 }
 
+#abttext a{
+    text-decoration: none;
+    color: white;
+    
+}
+#abttext a:hover{
+    color: #e1306c;
+}
 .abttex{
     font-family: 'EB Garamond', serif;
     font-size: 0.5cm;
+    
 }
 
 #abttext p{
@@ -297,7 +307,7 @@ div.dp:hover{
 .ml9 {
     position: relative;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 2cm;
     font-family: 'Bebas Neue', cursive;
     color: white;
   }
@@ -305,28 +315,163 @@ div.dp:hover{
   .ml9 .text-wrapper {
     position: relative;
     display: inline-block;
-    padding-top: 0.2em;
+    padding-top: 5px;
     padding-right: 0.05em;
-    padding-bottom: 0.1em;
+    padding-bottom: 2px;
     overflow: hidden;
   }
   
+
   .ml9 .letter {
     transform-origin: 50% 100%;
     display: inline-block;
     line-height: 1em;
+
   }
 
   #achpos{
       position: absolute;
-      right: 3cm;
-      opacity: 0.50;
+      right: 5cm;
       top: 25cm;
+      opacity: 0.50;
   }
 
-  #certpos img{
-        margin:2%;
-        position: absolute;
-        top: 25cm;
-        
+  #achpos:hover{
+      opacity: 1;
   }
+
+/*certificates*/
+  #certpos1 img{
+    margin-top: 3%;
+    margin-left: 10%;
+    position: absolute;
+    top: 25cm;
+  }
+  #certpos1 img:hover{
+    transform: scale(1.2);
+  }
+  
+  #certpos2 img{
+    margin-top: 3%;
+    margin-left: 10%;
+    position: absolute;
+    top: 33cm;
+  }
+  #certpos2 img:hover{
+    transform: scale(1.2);
+  }
+  
+  #certpos3{
+    position: absolute;
+    top: 33cm;
+    margin-left: 55%;
+    margin-top: 3%;
+  }
+  #certpos3 img:hover{
+    transform: scale(1.2);
+  }
+  
+.certi img{ 
+    border-radius: 20px;
+}
+
+/*Languages*/
+
+ #langpos{
+     position: absolute;
+     top: 45cm;
+     left: 4.5cm;
+     color: white;
+     margin-right: 5cm;
+ }
+
+ #langico{
+    position: relative;
+    bottom: 6cm;
+    left: 12cm; 
+    width: 490px;
+    border:#833ab4 2px solid;
+    border-radius: 10px;
+    padding-left: 1cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    -webkit-animation: ease-in;
+    -webkit-animation-name: borcolor;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+
+ }
+
+ #langico i,svg{
+     width: 2cm;
+ }
+ #langico i:hover,svg:hover{
+     transform: scale(1.2);
+     opacity: 1;
+ }
+
+ @keyframes borcolor{
+     0%{
+         border-left:#833ab4 3px solid;
+         border-right: #405de6 3px solid;
+         border-bottom:#5851db 3px solid;
+         border-top: #c4264e 3px solid;
+         opacity: 1;
+     }
+     25%{
+        border-top:#fd1d1d 3px solid;
+        border-bottom: #405de6 3px solid;
+        border-right:#833ab4 3px solid;
+        border-left:#e1306c 3px solid;
+        opacity: 0.8;
+     }
+     50%{
+        border-right:#c13584 3px solid;
+        border-bottom:#833ab4 3px solid;
+        border-left:#e1306c 3px solid;
+        border-top: #5851db 3px solid;
+        opacity: 0.7;
+     }
+     75%{
+        border-bottom:#fd1d1d 3px solid;
+        border-top: #405de6 3px solid;
+        border-left:#833ab4 3px solid;
+        border-right:#e1306c 3px solid;
+        opacity: 0.8;
+     }
+     100%{
+         border-top: #c13584 3px solid;
+         border-bottom: #5851db 3px solid;
+         border-right: #405de6 3px solid;
+         border-left: #833ab4 3px solid;
+         opacity: 1;
+     }
+ }
+
+div.abt:hover{
+    opacity: 1;
+}
+
+#langico:hover{
+    opacity: 1 !important;
+}
+
+
+/*scroll bar*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+
+  .progress-bar {
+    height: 3px;
+    background: rgb(88,81,219);
+    background: linear-gradient(90deg, rgba(88,81,219,1) 0%, rgba(131,58,180,1) 25%, rgba(193,53,132,1) 50%, rgba(196,38,78,1) 75%, rgba(225,48,108,1) 100%);
+    width: 0%;
+  }
+  
+ 
