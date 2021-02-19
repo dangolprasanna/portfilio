@@ -14,11 +14,6 @@
     </head>
     <body>
 
-        <div class="header">
-            <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
-            </div>  
-          </div>
     <section>
         <div class="text" id="lpage">
             <a href="https://www.facebook.com/dangolprasanna/" target="_blank"> 
@@ -130,60 +125,14 @@
         
     </section>
 
+    <div class="slide">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>  
+      </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-
-      $("a").on('click', function(event) {
-    
- 
-        if (this.hash !== "") {
-
-          event.preventDefault();
-    
-          var hash = this.hash;
-    
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 200, function(){
-       
-
-            window.location.hash = hash;
-          });
-        } 
-      });
-    });
-
-    var textWrapper = document.querySelector('.ml9 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml9 .letter',
-    scale: [0, 1],
-    duration: 1500,
-    elasticity: 600,
-    delay: (el, i) => 45 * (i+1)
-  }).add({
-    targets: '.ml9',
-    opacity: 0,
-    duration: 500,
-    easing: "easeOutExpo",
-    delay: 500
-  });
-
-
-
-
-  window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
+    <script src="setup.js">
     </script>
     </body>
 </html>

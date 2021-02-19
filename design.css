@@ -288,7 +288,7 @@ div.dp:hover{
 #abttext a{
     text-decoration: none;
     color: white;
-    
+    font-weight: bold;
 }
 #abttext a:hover{
     color: #e1306c;
@@ -332,7 +332,7 @@ div.dp:hover{
   #achpos{
       position: absolute;
       right: 5cm;
-      top: 25cm;
+      top: 25.5cm;
       opacity: 0.50;
   }
 
@@ -456,19 +456,18 @@ div.abt:hover{
     opacity: 1 !important;
 }
 
-
 /*scroll bar*/
-.header {
+.slide {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: black;
   }
 
   .progress-bar {
-    height: 3px;
+    height: 4px;
     background: rgb(88,81,219);
     background: linear-gradient(90deg, rgba(88,81,219,1) 0%, rgba(131,58,180,1) 25%, rgba(193,53,132,1) 50%, rgba(196,38,78,1) 75%, rgba(225,48,108,1) 100%);
     width: 0%;
